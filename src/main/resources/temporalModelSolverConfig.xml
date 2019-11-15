@@ -1,0 +1,27 @@
+<solver>
+    <solutionClass>com.hugoviallon.opta.model.Planification</solutionClass>
+    <entityClass>com.hugoviallon.opta.model.Task</entityClass>
+
+    <scoreDirectorFactory>
+        <incrementalScoreCalculatorClass>com.hugoviallon.opta.model.PlanificationIncrementalScoreCalculator</incrementalScoreCalculatorClass>
+    </scoreDirectorFactory>
+
+    <termination>
+        <secondsSpentLimit>50</secondsSpentLimit>
+    </termination>
+
+    <!--<localSearch>
+        <acceptor>
+            <acceptorType>HILL_CLIMBING</acceptorType>
+            <moveTabuSize>7</moveTabuSize>
+        </acceptor>
+        <forager>
+            <acceptedCountLimit>1</acceptedCountLimit>
+        </forager>
+    </localSearch>-->
+
+    <localSearch>
+        <localSearchType>LATE_ACCEPTANCE</localSearchType>
+    </localSearch>
+
+</solver>
